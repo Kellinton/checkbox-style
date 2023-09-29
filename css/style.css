@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --darkblue: #161925;
+    --lightblue: #446688;
+    --white: #fffcf9;
+    --green: #31af8b;
+    --orange: #ff850a;
+    --shadow-card: 5px 5px 15px rgba(0,0,0,0.1);
+  }
+  
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    background-color: rgb(73, 64, 64);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=checkbox]{
+ display: none;
+}
+
+input[type=checkbox] + label::before{
+    content: "Ativo";
+    color: var(--darkblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    box-shadow: var(--shadow-card);
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    align-self: center;
+    opacity: 0.9;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(10px, 15px, 15px, 0.5);
+}
+input[type=checkbox]:checked + label::before{
+    content: "Inativo";
+    color: var(--darkblue);
+    background-color: rgb(92, 78, 78);
+    cursor: pointer;
+}
+
+
